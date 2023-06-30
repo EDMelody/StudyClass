@@ -1,0 +1,96 @@
+<!--
+ * @Author: 
+ * @Date: 2023-06-26 12:37:47
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-06-29 13:57:58
+ * @FilePath: \study\study.html
+ * @Description: 
+ * 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>狗娜2号</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  #box{
+    background-color: #000;
+    width: 100%;
+    height: 100vh;
+    padding-top: 100px;
+  }
+  .section{
+    width: 300px;
+    height: 160px;
+    background-color: rgb(26, 26, 26);
+    margin: 0 auto 20px;
+    padding: 10px;
+    /* border: 1px solid #fff; */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+  }
+  /* 选中section盒子下面的图片 */
+  .section img{
+    width: 49px;
+    height: 49px;
+  }
+    /* 选中section盒子下面的标题 */
+
+  .section h2{
+    color: #fff;
+    font-size: 20px;
+    margin-top: 10px;
+  }
+  /* 选中section盒子下面的内容 */
+  .section p{
+    font-size: 16px;
+    color: #fff;
+    margin-top: 6px;
+  }
+  .section:hover{
+    width: 320px;
+    background: #ccc;
+    /* height: 180px; */
+    transition: all .25s linear;
+  }
+  .section:hover p, .section:hover h2{
+    color: #000;
+  }
+</style>
+<body>
+  <div id="box">
+    <div class="section">
+      <img src="./music.png" alt="">
+      <h2>AddMusic</h2>
+      <p>nora is pig</p>
+    </div>
+    <div class="section">
+      <img src="./time.png" alt="">
+      <h2>Time</h2>
+      <p>biubiu</p>
+    </div>
+    <div class="section">
+      <img src="./sharpicons_scissor.png" alt="">
+      <h2>Montage</h2>
+      <p>boom</p>
+    </div>
+    <div class="section">
+      <img src="./more.png" alt="">
+      <h2>More</h2>
+      <p>apple one apple two</p>
+    </div>
+  </div>
+</body>
+</html>
