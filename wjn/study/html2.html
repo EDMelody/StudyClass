@@ -1,0 +1,86 @@
+<!-- !：输入英文!--！是html骨架的快捷键 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>臭狗韵！</title>
+</head>
+<style>
+    #box{
+        /* 因为只设置了100vh的高度，所以超出100vh的部分就是白色的*/
+        height: 100vh;
+        width: 100%;
+        background-color: black;
+        /* padding-top；距离顶部内边距 */
+        padding-top: 60px;
+    }
+    *{
+        margin:0;
+        padding:0;
+    }
+    .section{
+        height: 160px;
+        width: 300px;
+        background-color:rgb(26, 26, 26) ;
+        /* border边框有三个参数：宽度，实线（solid）虚线（dashed），颜色 */
+        border: 1px solid black;
+        /* 边框圆角：圆角弧度--只有1个值A的时候，这个A值会控制4个角；有2个值AB的时候，A控制左上右下，B控制右上左下；有3个值ABC时，A控制左上，B控制右上左下，C控制右下；有4个值ABCD时，A控制左上，B控制右上，C控制右下，D控制左下） */
+        border-radius: 10px 10px;
+        /* border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;*/
+        /* margin：外边距--和👆圆弧一样：一个值，A->上右下左，两个值AB A->上下 B->左右 ，三个值ABC A->上 B->左右 C->下， 四个值ABCD A->上 B>右 C->下 D->左 */
+        margin:0 auto 10px;
+        /* padding内边距-- 同⬆️（外边距）：一个值，A->上右下左，两个值AB A->上下 B->左右 ，三个值ABC A->上 B->左右 C->下， 四个值ABCD A->上 B>右 C->下 D->左*/
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    .section h2{
+        color: rgb(219, 124, 155);
+        text-align: center;
+        font-size: 20px;
+        /* margin-top：距离顶部的外边距 */
+        margin-top: 10px;
+    }
+    /* 白色的三种颜色表达方式：#fffff, rgb(255, 255, 255), white//hex格式、rgb格式、英语单词格式 */
+    .section p{
+        color: pink;
+        font-size: 14px;
+        margin-top: 4px;
+    }
+    .section img{
+        width: 49px;
+        height: 49px;
+    }
+</style>
+<body>
+    <div id="box">
+        <div class="section">
+            <img src="./音乐.png" alt="">
+            <h2>Add sounds</h2>
+            <p>Using trendy music is more likely to go viral</p>
+        </div>
+        <div class="section">
+            <img src="./时钟.png" alt="">
+            <h2>Schedule post</h2>
+            <p>Better schedule your post time</p>
+        </div>
+        <div class="section">
+            <img src="./剪刀.png" alt="">
+            <h2>Apply template</h2>
+            <p>Auto resizing your videos to 9:16</p>
+        </div>
+        <div class="section">
+            <img src="./省略号.png" alt="">
+            <h2>Cut and trim your videos</h2>
+            <p>Easy edit your videos</p>
+        </div>
+    </div>
+</body>
+</html>

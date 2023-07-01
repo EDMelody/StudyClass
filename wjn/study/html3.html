@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弹性盒子</title>
+</head>
+<style>
+    /* #box：选中id为box的盒子 */
+    /* 用,隔开，就赋予了另一个盒子一样的样式了 */
+    #box,#box1{
+        height: 300px;
+        width: 500px; 
+        margin:0 auto 10px;
+        background-color: black;
+        /* display：用于控制元素在页面中的呈现方式，后面跟参数 */
+        /* flex：是一种布局方式，作为参数 */
+        /* display:为none的时候就是隐藏元素，none为参数 */
+        display: flex;
+        /* 这个属性规定元素的方向，但是必须和弹性盒子一起用，就是display: flex;一起使用，单独使用是没有效果的*/
+        /* row：行；column：列 */
+        flex-direction: column;
+    }
+    .hash{
+        /* 设置盒子均等占比1:1:1 */
+        flex: 1;
+    }
+    .hash1{
+        background-color: aliceblue;
+    }
+    .hash2{
+        background-color: antiquewhite;
+    }
+    .hash3{
+        background-color: aqua;
+        /* 其中一个盒子占2份 */
+        flex: 2;
+    }
+    .kao{
+        width: 80px;
+        height: 50px;
+        background: pink;
+    }
+    #box1{
+        /* 弹性盒子里面的水平居中；start, center, end：左边 ，水平居中，右边 */
+        /* 和display: flex;捆绑使用 */
+        justify-content: center;
+        /* 垂直居中 */
+        align-items:center;
+    }
+</style>
+<body>
+    <div id="box">
+        <div class="hash hash1"></div>
+        <div class="hash hash2"></div>
+        <div class="hash hash3"></div>
+    </div>
+    <div id="box1">
+        <div class="kao"></div>
+    </div>
+</body>
+</html>
