@@ -2,7 +2,7 @@
  * @Author: 
  * @Date: 2023-07-10 15:07:51
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2023-07-10 15:15:47
+ * @LastEditTime: 2023-07-10 15:30:55
  * @FilePath: \StudyClass\zjy\demo\1.html
  * @Description: 
  * 
@@ -17,23 +17,30 @@
 </head>
 <style>
   .container{
-    width: 900px;
-    height: 600px;
+    width: 100%;
+    max-width: 600px;
+    /* height: 600px; */
+    aspect-ratio: 1/1;
     background-color: #000;
     display: flex;
     justify-content: center;
     align-items: center;
     filter: contrast(50);
+    margin: 100px auto 0;
   }
   .box1, .box2{
-    width: 200px;
-    height: 200px;
-    background-color: #fff;
+    width: 30%;
+    aspect-ratio: 1/1;
+    /* height: 10%; */
+    /* max-width: 200px; */
+    /* min-height: 200px; */
     border-radius: 50%;
     float: left;
     filter: blur(25px);
+    background-color: #fff;
   }
   .box1{
+    /* background-color: #fff; */
     animation: box-a1 0.8s ease-in-out infinite alternate;
   }
   .box2{

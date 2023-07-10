@@ -1,0 +1,146 @@
+<!--
+ * @Author: 
+ * @Date: 2023-07-10 15:34:05
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-07-10 17:12:16
+ * @FilePath: \StudyClass\zjy\demo\2-CSS偏3D反转框.html
+ * @Description: 
+ * 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D反转框</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+  }
+  #box{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, skyblue, purple);
+  }
+  .card{
+    width: 300px;
+    height: 400px;
+    position: relative;
+  }
+  .card .front, .card .back{
+    position: absolute;
+    left: 0;
+    top: 0;
+    backface-visibility: hidden;
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
+  }
+  .card .front{
+    background: url(./img/2.jpeg);
+    background-size: cover;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    border-radius: 15px;
+
+  }
+  .card .front::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 80px;
+    top: 55%;
+    background: rgba(0, 0, 0, 0.45);
+    transform: translate3d(-50%, -50%, 20px);
+  }
+  .card .front p{
+    font-size: 15px;
+    position: absolute;
+    width: 300px;
+    top: 55%;
+    left: 50%;
+    transform:
+      translateX(-50%)
+      translateY(-50%)
+      translateZ(60px);
+  }
+  .card .back{
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background-color: #505050;
+    padding: 20px;
+    border-radius: 15px;
+  }
+  .card .back .hero{
+    width: 250px;
+    border-bottom: 2px solid #b49758;
+    padding-bottom: 15px;
+  }
+  .card .back .hero h2{
+    color: #f8fae4;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
+  .card .back span{
+    display: inline-block;
+    width: 40px;
+    height: 25px;
+    text-align: center;
+    background-color: #c09f5a;
+    line-height: 25px;
+    border-radius: 2px;
+    color: #191d20;
+    font-weight: bold;
+  }
+  .card .back .desc{
+    text-indent: 2em;
+    font-size: 18px;
+    color: #fff;
+    text-align: left;
+    line-height: 30px;
+    padding: 15px 5px;
+    letter-spacing: 2px;
+  }
+  .card .back{
+    transform: rotateY(180deg);
+  }
+  .card:hover .front{
+    transform: rotateY(-180deg);
+  }
+  .card:hover .back{
+    transform: rotateY(0deg);
+  }
+  .threeD{
+    backface-visibility: hidden;
+    transform: translateZ(60px);
+  }
+</style>
+<body>
+  <div id="box">
+    <div class="card">
+      <div class="front">
+        <p>狗娜！</p>
+      </div>
+      <div class="back">
+        <div class="hero threeD">
+          <h2>标题</h2>
+          <span>标签1</span>
+          <span>标签1</span>
+          <span>标签1</span>
+        </div>
+        <div class="desc threeD">
+          描述文字，这里有一大段文字巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉巴拉
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
