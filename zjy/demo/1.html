@@ -1,0 +1,65 @@
+<!--
+ * @Author: 
+ * @Date: 2023-07-10 15:07:51
+ * @LastEditors: Please set LastEditors
+ * @LastEditTime: 2023-07-10 15:15:47
+ * @FilePath: \StudyClass\zjy\demo\1.html
+ * @Description: 
+ * 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS边缘融合</title>
+</head>
+<style>
+  .container{
+    width: 900px;
+    height: 600px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: contrast(50);
+  }
+  .box1, .box2{
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 50%;
+    float: left;
+    filter: blur(25px);
+  }
+  .box1{
+    animation: box-a1 0.8s ease-in-out infinite alternate;
+  }
+  .box2{
+    animation: box-a2 0.8s ease-in-out infinite alternate;
+  }
+  @keyframes box-a1 {
+    from {
+      transform: translateX(-30px);
+    } 
+    to {
+      transform: translateX(25px);
+    }
+  }
+  @keyframes box-a2 {
+    from {
+      transform: translateX(30px);
+    } 
+    to {
+      transform: translateX(-25px);
+    }
+  }
+</style>
+<body>
+    <div class="container">
+        <div class="box1"></div>
+        <div class="box2"></div>
+    </div>
+</body>
+</html>
