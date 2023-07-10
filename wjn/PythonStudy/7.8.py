@@ -17,7 +17,7 @@ def nora2():
 
 # for循环
 def nora1():
-    list1 = range(0, 100, 5) # [1,2,3 ,4,.., 100]
+    list1 = range(0, 100, 5)
     # print((list1))
     sum = 0
     for y in list1:
