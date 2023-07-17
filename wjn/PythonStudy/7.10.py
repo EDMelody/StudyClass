@@ -1,7 +1,7 @@
 # name = input()
 # print(name)
 
-# 闰年：能被4整除，不能被100整除 或 能被400整
+# 闰年：能被4或者400整除，且不能被100整除 
 def gouYun(): # def 定义函数方法
     year = int(input('请输入年份'))
     # boolean 布尔类型
